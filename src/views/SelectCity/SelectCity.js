@@ -10,21 +10,24 @@ import Spinner from '../../components/Spinner/Spinner';
 import './SelectCity.scss';
 
 const SelectCity = ({ loading, cities, expiry, getCities}) => {
-  const [filter, setFilter] = useState('')
-  const [cityFiltered, setCityFiltered] = useState(cities)
+  const [filter, setFilter] = useState('') // city filterer
+  const [cityFiltered, setCityFiltered] = useState(cities) // list of cities after filtering
 
   useEffect(() => {
-    if (expiry <= new Date().getTime()) getCities();
+    if (expiry <= new Date().getTime()) getCities(); // if data expired, get new data, else use data in store
   }, [expiry, getCities]);
 
   useEffect(() => {
+    // filter city with regular expression
     setCityFiltered(cities.filter(city => new RegExp(`^${filter.toLowerCase()}`).test(city.toLowerCase())))
   }, [filter, cities])
 
+  // if loading cities, render a loading screen
   if (loading) {
     return <Spinner />
   }
 
+  // handle input change
   const handleChange = event => {
     setFilter(event.target.value)
   }

@@ -5,6 +5,7 @@ Things to add:
 2. Style the app to look better.
 3. More and better tests.
 4. Better responsive design.
+5. Design store in a better way, ie. currently cities loaded the first time need to be treated specially.
 ##### What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 Arrow function
 ```javascript

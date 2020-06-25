@@ -21,19 +21,23 @@ const RestaurantList = React.forwardRef(({ restaurants, city }, ref) => {
 });
 
 const Restaurant = ({ restaurant, getRestaurants, clearRestaurants }) => {
-  const { city } = useParams();
-  const [form, setForm] = useState({
+  const { city } = useParams(); // name of city from url
+  const [form, setForm] = useState({ // filter form
     name: '',
     address: ''
   });
-  const [restaurantFiltered, setRestaurantFiltered] = useState([]);
-  const listEl = useRef(null);
+  const [restaurantFiltered, setRestaurantFiltered] = useState([]); // list of restaurants after filtering
+  const listEl = useRef(null); // restaurant div element
 
   const getMoreRestaurants = () => {
+    // first time loading this city, no data available yet
     if (!restaurant[city]) {
       getRestaurants(city, 1);
       return;
     }
+    // if city is loading or loaded the last page, stop.
+    // prevents duplicated and redundant requests
+    // else if restaurant list has not reached bottom yet, continue requesting for more
     if (restaurant[city].loading || restaurant[city].eol) return
     else if (listEl.current.scrollHeight - listEl.current.clientHeight === listEl.current.scrollTop) {
       getRestaurants(city, restaurant[city].index);
@@ -41,20 +45,24 @@ const Restaurant = ({ restaurant, getRestaurants, clearRestaurants }) => {
   }
 
   const handleScroll = () => {
+    // scroll bar reached bottom, request more data
     if (listEl.current.scrollHeight - listEl.current.clientHeight === listEl.current.scrollTop) {
       getMoreRestaurants();
     }
   }
 
+  // handle filter form change
   const handleChange = event => {
     setForm(Object.assign({}, form, { [event.target.id]: event.target.value }))
   }
 
+  // if restaurant data expired, clear existing data
   useEffect(() => {
     if (restaurant[city] && restaurant[city].expiry <= new Date().getTime()) clearRestaurants(city);
     else setTimeout(() => getMoreRestaurants());
   }, [restaurant[city], form]);
 
+  // filter restaurant list by filter form
   useEffect(() => {
     if (restaurant[city] && restaurant[city].restaurants)
       setRestaurantFiltered(restaurant[city].restaurants.filter(
@@ -62,6 +70,7 @@ const Restaurant = ({ restaurant, getRestaurants, clearRestaurants }) => {
       ))
   }, [restaurant[city], form])
 
+  // if restaurant is loading, render a loading screen
   if (!restaurant[city]) return <Spinner />
 
   return (

@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 
 import './index.scss';
 
+// initialize store with default state
 const store = configureStore({
   city: {
     loading: false,
