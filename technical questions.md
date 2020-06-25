@@ -1,7 +1,7 @@
 ##### How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test then use this as an opportunity to explain what you would add.
 Time spent - 10 hours.
 Things to add:
-1. Due to the number of cities, search box could perform badly if typed rapidly, adding a throttle could help with this.
+1. Due to the number of cities, search box could perform badly if typed rapidly, adding a debounce function could help with this.
 2. Style the app to look better.
 3. More and better tests.
 4. Better responsive design.
