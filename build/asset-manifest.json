@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.267abeba.chunk.css",
+    "main.js": "/static/js/main.11a1db7b.chunk.js",
+    "main.js.map": "/static/js/main.11a1db7b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0b205b0f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0b205b0f.js.map",
+    "views/RestaurantList.css": "/static/css/views/RestaurantList.2c137344.chunk.css",
+    "views/RestaurantList.js": "/static/js/views/RestaurantList.7a766e04.chunk.js",
+    "views/RestaurantList.js.map": "/static/js/views/RestaurantList.7a766e04.chunk.js.map",
+    "views/SelectCity.css": "/static/css/views/SelectCity.45e136c8.chunk.css",
+    "views/SelectCity.js": "/static/js/views/SelectCity.f3b9fd7f.chunk.js",
+    "views/SelectCity.js.map": "/static/js/views/SelectCity.f3b9fd7f.chunk.js.map",
+    "static/js/4.71f2ec1c.chunk.js": "/static/js/4.71f2ec1c.chunk.js",
+    "static/js/4.71f2ec1c.chunk.js.map": "/static/js/4.71f2ec1c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.42dc8e564bc687a762b74a59cd0cf93f.js": "/precache-manifest.42dc8e564bc687a762b74a59cd0cf93f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.267abeba.chunk.css.map": "/static/css/main.267abeba.chunk.css.map",
+    "static/css/views/RestaurantList.2c137344.chunk.css.map": "/static/css/views/RestaurantList.2c137344.chunk.css.map",
+    "static/css/views/SelectCity.45e136c8.chunk.css.map": "/static/css/views/SelectCity.45e136c8.chunk.css.map",
+    "static/js/4.71f2ec1c.chunk.js.LICENSE.txt": "/static/js/4.71f2ec1c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b205b0f.js",
+    "static/js/4.71f2ec1c.chunk.js",
+    "static/css/main.267abeba.chunk.css",
+    "static/js/main.11a1db7b.chunk.js"
+  ]
+}

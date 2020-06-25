@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+
+  #root {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+    .App {
+      height: calc(100vh - var(--header-height));
+      width: 100vw;
+      max-width: 1000px;
+      margin: auto;
+    }
+  }
+}

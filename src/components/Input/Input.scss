@@ -1,0 +1,23 @@
+.input {
+  .input-label {
+    display: block;
+    margin-bottom: .25rem;
+    font-weight: 600;
+  }
+
+  .input-field {
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    line-height: 1.5;
+    padding: .25rem .75rem;
+    transition: all .15s ease-in-out;
+
+    &:focus {
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    }
+  }
+}

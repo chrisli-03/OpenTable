@@ -1,0 +1,17 @@
+#restaurant {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .search-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .restaurant-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 -10px;
+  }
+}

@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #40a9ff;
+  border-radius: .25rem;
+  padding: .4rem;
+
+  .card-title {
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+  }
+
+  .card-body {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 0;
+
+    .card-body-icon {
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+    }
+
+    .card-body-detail {
+      .card-body-detail-line {
+        display: flex;
+        flex-wrap: nowrap;
+
+        div:first-child {
+          display: inline-block;
+          width: 90px;
+          text-align: right;
+          white-space: nowrap;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  .card-reserve {
+    a {
+      color: #007bff;
+      transition: color .25s;
+
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+}
