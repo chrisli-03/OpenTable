@@ -71,7 +71,7 @@ const Restaurant = ({ restaurant, getRestaurants, clearRestaurants }) => {
       }
       <Link className="btn margin-tb" to='/'>Back</Link>
       <div className="search-box margin-tb">
-        <div style={{ marginRight: 15 }}>
+        <div>
           <Input id="name" label="Name" onChange={handleChange} />
         </div>
         <div>

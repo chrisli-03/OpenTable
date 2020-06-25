@@ -7,11 +7,36 @@
   .search-box {
     display: flex;
     flex-wrap: wrap;
+
+    & > div {
+      margin-right: 10px;
+    }
+
+    & > div:last-child {
+      margin-right: 0;
+    }
   }
 
   .restaurant-list {
     display: flex;
     flex-wrap: wrap;
     margin:0 -10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #restaurant {
+    .search-box {
+      & > div {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    .restaurant-list {
+      & > div {
+        width: 100%;
+      }
+    }
   }
 }

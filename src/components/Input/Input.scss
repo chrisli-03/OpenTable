@@ -21,3 +21,13 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .input {
+    width: 100%;
+
+    .input-field {
+      width: 100%;
+    }
+  }
+}

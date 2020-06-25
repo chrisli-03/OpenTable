@@ -55,7 +55,7 @@ export function setEndOfList(city, eol) {
 export function getRestaurants(city, index) {
   return dispatch => {
     dispatch(setLoading(city, true));
-    fetch(`http://opentable.herokuapp.com/api/restaurants?city=${city}&page=${index}`)
+    fetch(`https://opentable.herokuapp.com/api/restaurants?city=${city}&page=${index}`)
       .then(response => response.json())
       .then(data => {
         dispatch(appendRestaurants(city, data.restaurants));
