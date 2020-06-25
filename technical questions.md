@@ -6,6 +6,7 @@ Things to add:
 3. More and better tests.
 4. Better responsive design.
 5. Design store in a better way, ie. currently cities loaded the first time need to be treated specially.
+6. A sort by price function would be useful, but it requires api change.
 ##### What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 Arrow function
 ```javascript
@@ -29,6 +30,7 @@ Although not from the latest JavaScript, but they are from the big es6 update.
 One problem I had with the API is it doesn't take properties like restaurant name, so when filtering by restaurant name it's impossible to know for example how many restaurants have name starts with the letter 'A'.
 Because of this it's hard to use pagination for traversing list of restaurant, which is why I did a pull down to refresh.
 This type of filter should happen during select from db.
+Also I want to add a sort by parameter to sort the list by something like price.
 ##### Please describe yourself using JSON.
 ```json
 {
